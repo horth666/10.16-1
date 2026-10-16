@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#180d10">
+  <meta name="description" content="十幕豪门剧情选择，揭开你的隐藏身份与最终命运。">
+  <title>如果你穿进豪门，你会是什么身份？</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="paper-noise" aria-hidden="true"></div>
+  <main id="app" class="app-shell">
+    <section id="home-screen" class="screen home-screen is-active" aria-labelledby="site-title">
+      <div class="home-frame">
+        <header class="masthead">
+          <span>THE HEIR FILES</span>
+          <span>PRIVATE EDITION · 01</span>
+        </header>
+
+        <div class="hero-copy">
+          <p class="eyebrow">一封未署名的邀请函，把你带回了晏家老宅</p>
+          <h1 id="site-title">如果你穿进豪门<br><em>你会是什么身份？</em></h1>
+          <div class="title-rule" aria-hidden="true"><span></span><i>Y</i><span></span></div>
+          <p class="hook">今夜十点，遗嘱将被公开。<br>可名单上那个最不该出现的名字，是你。</p>
+          <button id="start-button" class="primary-action" type="button">
+            <span>赴宴，开启我的命运</span>
+            <span class="button-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+
+        <div class="mansion-mark" aria-hidden="true">
+          <svg viewBox="0 0 560 210" role="img">
+            <path d="M64 181h432M104 181v-73h352v73M91 108h378M122 108l158-74 158 74M156 181v-53h50v53M255 181v-53h50v53M354 181v-53h50v53M280 34v74M245 51h70"/>
+            <path class="thin" d="M78 181v-21h26M482 181v-21h-26M104 117h352M232 108l48-43 48 43"/>
+          </svg>
+        </div>
+
+        <footer class="home-footer">
+          <p>十幕剧情 · 十二重身份 · 你的选择会留下证据</p>
+          <span>仅供娱乐</span>
+        </footer>
+      </div>
+    </section>
+
+    <section id="story-screen" class="screen story-screen" aria-labelledby="scene-title" aria-live="polite">
+      <header class="story-header">
+        <div class="brand-mini">THE HEIR FILES</div>
+        <div class="progress-copy"><span id="progress-current">01</span><span>/ 10</span></div>
+      </header>
+      <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+
+      <article id="scene-card" class="scene-layout">
+        <aside class="scene-index" aria-hidden="true">
+          <span id="scene-roman">I</span>
+          <i></i>
+        </aside>
+        <div class="scene-content">
+          <p id="scene-label" class="scene-label"></p>
+          <h2 id="scene-title"></h2>
+          <p id="scene-body" class="scene-body"></p>
+          <p id="story-echo" class="story-echo" hidden></p>
+          <div id="options" class="options" role="group" aria-label="选择你的行动"></div>
+        </div>
+      </article>
+      <p class="choice-note">没有标准答案。你做出的每个决定，都会留在家族档案里。</p>
+    </section>
+
+    <section id="reveal-screen" class="screen reveal-screen" aria-live="polite">
+      <div class="reveal-seal" aria-hidden="true"><span>晏</span></div>
+      <p>FINAL ARCHIVE</p>
+      <h2>身份核验完成</h2>
+      <div class="reveal-line"><span></span></div>
+      <p class="reveal-status">正在开启你的绝密档案</p>
+    </section>
+
+    <section id="result-screen" class="screen result-screen" aria-labelledby="result-title">
+      <div class="result-sheet">
+        <header class="result-cover">
+          <div class="result-kicker">
+            <span>CONFIDENTIAL</span>
+            <span id="result-code">FAMILY FILE 01</span>
+          </div>
+          <div class="result-emblem" aria-hidden="true"><span>Y</span></div>
+          <p class="result-overline">你的豪门身份是</p>
+          <h2 id="result-title"></h2>
+          <p id="result-tagline" class="result-tagline"></p>
+        </header>
+
+        <div class="result-content">
+          <section class="lead-section">
+            <span class="section-no">01</span>
+            <div>
+              <h3>身份介绍</h3>
+              <p id="result-intro"></p>
+            </div>
+          </section>
+
+          <div class="result-grid">
+            <section>
+              <span class="section-no">02</span>
+              <h3>命运档案</h3>
+              <p id="result-archive"></p>
+            </section>
+            <section class="advantage-panel">
+              <span class="section-no">03</span>
+              <h3>隐藏优势</h3>
+              <p id="result-advantage"></p>
+            </section>
+          </div>
+
+          <section class="turning-section">
+            <div class="turning-label">命运转折 / TURNING POINT</div>
+            <p id="result-turning"></p>
+          </section>
+
+          <blockquote>
+            <p id="result-quote"></p>
+            <footer>— 你的命运宣言</footer>
+          </blockquote>
+
+          <div class="result-actions">
+            <button id="restart-button" class="secondary-action" type="button">重新进入家族</button>
+            <button id="share-button" class="primary-action compact" type="button">
+              <span>分享我的身份</span><span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p id="share-feedback" class="share-feedback" role="status" aria-live="polite"></p>
+          <p class="disclaimer">本测试为虚构剧情娱乐体验，不构成任何心理或现实判断。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
